@@ -1,49 +1,54 @@
 #include <iostream>
 #include <string>
-#include <random>
 
-class human{
-
+class human {
 public:
-	int age;
-	int weight;
-	std::string name;
-	std::string swag;
-	
-	void print(){
-		std::cout << "age: " << age 
-                  << "\nweight: " << weight 
-                  << "\nname: " << name << std::endl;
-	}
+    int age{};
+    int weight{};
+    std::string name;
 };
 
+class point {
+private:
+    int x{};
+    int y{};
 
-int main(){
-human firstHuman;
+protected:
+    int z{};
 
-    int age;
-    int weight;
-    std::string name;
-    
-    std::cout << "insert your age: ";
-    std::cin >> age;
-    std::cout << "insert your weight: ";
-    std::cin >> weight;
-    std::cout << "insert your name: ";
-    std::getline(std::cin >> std::ws, name);
+public:
+    // setters / getters
+    int getX() const {
+        return x;
+    }
 
-	firstHuman.age = age;
-	firstHuman.weight = weight;
-	firstHuman.name = name;
+    void setX(int valueX) {
+        x = valueX;
+    }
 
-	firstHuman.print();
-	
-	int swag;
-	std::random_device rd;
-	std::mt19937 gen(rd());
-	std::uniform_int_distribution<> dist (0, 100);
-	swag = dist(gen);
-	std::cout << "your swag is: " << swag << "%"  << std::endl;
-	
-	return 0;
+    void setY(int valueY) {
+        y = valueY;
+    }
+
+    void setZ(int valueZ) {
+        z = valueZ;
+    }
+
+    // public print
+    void print() const {
+        std::cout << "x = " << x
+                  << "\t y = " << y
+                  << "\t z = " << z
+                  << std::endl << std::endl;
+    }
+};
+
+int main() {
+    point a;
+    a.setX(5);
+    a.setY(10);
+    a.setZ(15);
+
+    a.print();
+    return 0;
 }
