@@ -1,14 +1,16 @@
 #include <iostream>
 #include <string>
 
-class human {
+class human 
+{
 public:
     int age{};
     int weight{};
     std::string name;
 };
 
-class point {
+class point
+{
 private:
     int x{};
     int y{};
@@ -18,24 +20,29 @@ protected:
 
 public:
     // setters / getters
-    int getX() const {
+    int getX() const 
+    {
         return x;
     }
 
-    void setX(int valueX) {
+    void setX(int valueX) 
+    {
         x = valueX;
     }
 
-    void setY(int valueY) {
+    void setY(int valueY) 
+    {
         y = valueY;
     }
 
-    void setZ(int valueZ) {
+    void setZ(int valueZ) 
+    {
         z = valueZ;
     }
 
     // public print
-    void print() const {
+    void print() const 
+    {
         std::cout << "x = " << x
                   << "\t y = " << y
                   << "\t z = " << z
@@ -43,7 +50,8 @@ public:
     }
 };
 
-int main() {
+int main() 
+{
     point a;
     a.setX(5);
     a.setY(10);
