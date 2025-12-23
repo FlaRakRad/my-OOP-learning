@@ -2,7 +2,8 @@
 #include <string>
 #include <random>
 
-class human{
+class human
+{
 
 public:
 	int age;
@@ -10,15 +11,18 @@ public:
 	std::string name;
 	std::string swag;
 	
-	void print(){
-		std::cout << "age: " << age 
+	void print()
+	{
+		std::cout << "age: "      << age 
                   << "\nweight: " << weight 
-                  << "\nname: " << name << std::endl;
+                  << "\nname: "   << name 
+			      << std::endl    << std::endl;
 	}
 };
 
 
-int main(){
+int main()
+{
 human firstHuman;
 
     int age;
@@ -26,9 +30,9 @@ human firstHuman;
     std::string name;
     
     std::cout << "insert your age: ";
-    std::cin >> age;
+    std::cin  >> age;
     std::cout << "insert your weight: ";
-    std::cin >> weight;
+    std::cin  >> weight;
     std::cout << "insert your name: ";
     std::getline(std::cin >> std::ws, name);
 
@@ -38,7 +42,7 @@ human firstHuman;
 
 	firstHuman.print();
 	
-	int swag;
+	int swag; //randonm work
 	std::random_device rd;
 	std::mt19937 gen(rd());
 	std::uniform_int_distribution<> dist (0, 100);
