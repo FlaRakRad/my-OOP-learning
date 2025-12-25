@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-class human 
+class Human 
 {
 public:
     int age{};
@@ -9,7 +9,7 @@ public:
     std::string name;
 };
 
-class point
+class Point
 {
 private:
     int x{};
@@ -52,7 +52,7 @@ public:
 
 int main() 
 {
-    point a;
+    Point a;
     a.setX(5);
     a.setY(10);
     a.setZ(15);
