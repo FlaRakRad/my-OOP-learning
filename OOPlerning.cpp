@@ -28,6 +28,7 @@ public:
 
 
 
+    // getters / setters
     int getWeight() const 
     {
 	return weight;
@@ -76,7 +77,10 @@ public:
 	y = valueY;
 	z = valueZ;
     }
-    // setters / getters
+
+
+
+    // getters / setters
     int getX() const 
     {
         return x;
