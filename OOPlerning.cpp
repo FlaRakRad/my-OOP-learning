@@ -14,12 +14,48 @@ public:
 	weight = valueWeight;
 	name   = valueName;
     }
+
+
+
+    int getAge() const
+    {
+	return age;
+    }
+    void setAge(int valueAge)
+    {
+	age = valueAge;
+    }
+
+
+
+    int getWeight() const 
+    {
+	return weight;
+    }
+    void setWeight(int valueWeight)
+    {
+	weight = valueWeight;
+    }
+
+
+
+    std::string getName() const
+    {
+	return name;
+    }
+    void setName(std::string valueName)
+    {
+	name = valueName;
+    }
+
+
+
     void print() const
     {
-	std::cout << "age: " << age
+	std::cout << "age: "      << age
 		 << "\nweight: " << weight
 		 << "\nname: "   << name
-		 << std::endl;
+		 << std::endl    << std::endl;
     }
 };
 
@@ -45,21 +81,34 @@ public:
     {
         return x;
     }
-
     void setX(int valueX) 
     {
         x = valueX;
     }
 
+
+
+    int  getY() const
+    {
+	return y;
+    }
     void setY(int valueY) 
     {
         y = valueY;
     }
 
+
+
+    int getZ() const
+    {
+	return z;
+    }
     void setZ(int valueZ) 
     {
         z = valueZ;
     }
+
+
 
     // public print
     void print() const 
@@ -86,9 +135,9 @@ int main()
 
     first.print();
 
-	Human second(15,35,"Jeffrey");
+    Human second(15,35,"Jeffrey");
 
-	second.print();
+    second.print();
 
     return 0;
 };
