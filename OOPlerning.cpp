@@ -19,6 +19,12 @@ protected:
     int z{};
 
 public:
+    Point(int valueX,int valueY,int valueZ) // constructor
+    {
+        x = valueX;
+        y = valueY;
+        z = valueZ;    
+    }
     // setters / getters
     int getX() const 
     {
@@ -52,11 +58,11 @@ public:
 
 int main() 
 {
-    Point a;
-    a.setX(5);
-    a.setY(10);
-    a.setZ(15);
-
+    Point a(10,15,20); //values x;y;z to object a
     a.print();
+
+    Point b(1,2,3); //values x;y;z to object b
+    b.print();
+    
     return 0;
 }
