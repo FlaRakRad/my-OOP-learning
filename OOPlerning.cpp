@@ -86,5 +86,9 @@ int main()
 
     first.print();
 
+	Human second(15,35,"Jeffrey");
+
+	second.print();
+
     return 0;
 };
