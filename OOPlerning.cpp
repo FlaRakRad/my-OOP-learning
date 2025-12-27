@@ -8,6 +8,15 @@ private:
     int weight{};
     std::string name;
 public:
+
+    Human()
+    {
+	age    = 0;
+	weight = 0;
+	name   = "N/A";
+    }
+
+
     Human(int valueAge,int valueWeight,std::string valueName)
     {
 	age    = valueAge;
@@ -53,7 +62,7 @@ public:
 
     void print() const
     {
-	std::cout << "age: "     << age
+	std::cout << "age: "      << age
 		     << "\nweight: " << weight
 		     << "\nname: "   << name
 		     << std::endl    << std::endl;
@@ -150,6 +159,11 @@ int main()
     Human second(15,35,"Jeffrey");
 
     second.print();
+
+    
+    Human third;
+
+    third.print();
 
     return 0;
 };
