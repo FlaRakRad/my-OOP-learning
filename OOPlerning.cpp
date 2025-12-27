@@ -53,10 +53,10 @@ public:
 
     void print() const
     {
-	std::cout << "age: "      << age
-		      << "\nweight: " << weight
-		      << "\nname: "   << name
-		      << std::endl    << std::endl;
+	std::cout << "age: "     << age
+		     << "\nweight: " << weight
+		     << "\nname: "   << name
+		     << std::endl    << std::endl;
     }
 };
 
@@ -71,7 +71,14 @@ protected:
 
 public:
 
-    Point(int valueX,int valueY,int valueZ)
+Point()
+    {
+	x = 0;
+	y = 0;
+	z = 0;
+    }
+
+Point(int valueX,int valueY,int valueZ)
     {
 	x = valueX;
 	y = valueY;
@@ -126,11 +133,12 @@ public:
 
 int main() 
 {
-    Point a(5,44,20);
+    Point a;
 
     a.print();
 
-    Point b(10,15,20);
+
+    Point b(5,14,8);
 
     b.print();
 
