@@ -63,10 +63,10 @@ public:
     void print() const
     {
 	std::cout << "age: "      << age
-		     << "\nweight: " << weight
-		     << "\nname: "   << name
-		     << std::endl    << std::endl;
-    }
+		      << "\nweight: " << weight
+		      << "\nname: "   << name
+		      << std::endl    << std::endl;
+    } 
 };
 
 class Point 
