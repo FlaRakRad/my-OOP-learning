@@ -1,6 +1,40 @@
 #include <iostream>
 #include <string>
 
+class MyClass
+{
+private:
+	int* data;
+public:
+	MyClass(int size)
+	{
+		data = new int[size];
+
+		for (int i = 0; i < size; i++)
+		{
+			data[i] = i;
+		}
+
+		std::cout << "Object: " << data << " Called constructor " << std::endl;
+	}
+
+	~MyClass(/*can`t recive any parameters*/)
+	{
+		delete[] data;
+		std::cout << "Object: " << data << " Called distructor " << std::endl;
+	}
+
+};
+
+
+void foo()
+{
+	std::cout << " foo start " << std::endl;
+	MyClass obj(1);
+	std::cout << " foo end "   << std::endl;
+}
+
+
 class Human 
 {
 private:
@@ -66,7 +100,7 @@ public:
 		      << "\nweight: " << weight
 		      << "\nname: "   << name
 		      << std::endl    << std::endl;
-    } 
+    }
 };
 
 class Point 
@@ -164,6 +198,10 @@ int main()
     Human third;
 
     third.print();
+
+
+	foo();
+	
 
     return 0;
 };
