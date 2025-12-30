@@ -1,5 +1,5 @@
 #include <iostream>
-#include <stringr>
+#include <string>
 
 class Personality
 {
@@ -14,7 +14,7 @@ public:
 	{
 	age     = 0;
 	weight  = 0;
-	postID  = "N/A";
+	postID  = 0;
 	name    = "N/A";
 	surname = "N/A";
 	}
@@ -78,15 +78,14 @@ public:
 
 	void print() const
 	{
-		std::cout << "Age: "     << age;
-				  << "Weight: "  << weight;
-			 	  << "PostID: "  << PostID;
-				  << "Name: "    << name;
-				  << "Surname: " << surname;
-				  << std::endl   << std::endl;
+		std::cout << "Age: "     << age
+				 << "Weight: "  << weight
+				 << "PostID: "  << postID
+				 << "Name: "    << name
+				 << "Surname: " << surname
+				 << std::endl   << std::endl;
 	}
 
-	}
 };
 
 class Position
