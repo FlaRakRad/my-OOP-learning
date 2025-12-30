@@ -12,9 +12,9 @@ private:
 public:
 	Personality()
 	{
-	age     = 0;
-	weight  = 0;
-	postID  = 0;
+	age     = -1;
+	weight  = -1;
+	postID  = -1;
 	name    = "N/A";
 	surname = "N/A";
 	}
@@ -35,7 +35,10 @@ public:
 	}
 	void setAge(int valueAge)
 	{
-		age = valueAge;
+		if (valueAge >= 0 && valueAge <= 150)
+			age = valueAge;
+		else
+			age = -1;
 	}
 
 
@@ -45,7 +48,10 @@ public:
 	}
 	void setWeight(int valueWeight)
 	{
-		weight = valueWeight;
+		if (valueWeight >= 0 && valueWeight <= 150)
+			weight = valueWeight;
+		else
+			weight = -1;
 	}
 
 	int getPostID() const
@@ -54,7 +60,10 @@ public:
 	}
 	void setPostID(int valuePostID)
 	{
-		postID = valuePostID;
+		if (valuePostID >= 100000 && valuePostID <= 999999)
+			postID = valuePostID;
+		else
+			postID = -1;
 	}
 
 	std::string getName() const
@@ -78,12 +87,12 @@ public:
 
 	void print() const
 	{
-		std::cout << "Age: "     << age
-				 << "Weight: "  << weight
-				 << "PostID: "  << postID
-				 << "Name: "    << name
-				 << "Surname: " << surname
-				 << std::endl   << std::endl;
+		std::cout << "Age: "       << age
+				 << "\nWeight: "  << weight
+				 << "\nPostID: "  << postID
+				 << "\nName: "    << name
+				 << "\nSurname: " << surname
+				 << std::endl     << std::endl;
 	}
 
 };
@@ -108,5 +117,35 @@ class Human
 
 int main()
 {
+    int age;
+    int weight;
+    int postID;
+    std::string name;
+    std::string surname;
 
+    std::cout << "Enter age: ";
+    std::cin >> age;
+
+    std::cout << "Enter weight: ";
+    std::cin >> weight;
+
+    std::cout << "Enter postID: ";
+    std::cin >> postID;
+
+    std::cout << "Enter name: ";
+    std::cin >> name;
+
+    std::cout << "Enter surname: ";
+    std::cin >> surname;
+
+    Personality first(age, weight, postID, name, surname);    
+    first.setAge(age);
+    first.setWeight(weight);
+    first.setPostID(postID);
+    first.setName(name);
+    first.setSurname(surname);
+
+    first.print();
+
+    return 0;
 };
